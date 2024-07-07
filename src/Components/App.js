@@ -26,7 +26,23 @@ export default function App() {
   }
 
   function handleOperator(operator) {
-    setPrevOper(curOper + " " + operator);
+    if (curOper === "") {
+      return;
+    }
+    setPrevOper((prev) => prev + curOper + " " + operator + " ");
+    setCurOper("");
+  }
+
+  function handleEqual() {
+    if (curOper === "" || prevOper === "") {
+      return;
+    }
+
+    const expression = prevOper + curOper;
+    // console.log(expression);
+    const result = eval(expression);
+    setCurOper(result);
+    setPrevOper("");
   }
 
   return (
@@ -37,6 +53,7 @@ export default function App() {
         onClickAC={handleClickAC}
         onClickDEL={handleClickDEL}
         onClickOperator={handleOperator}
+        onClickEqual={handleEqual}
       />
     </div>
   );

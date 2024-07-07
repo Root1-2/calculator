@@ -3,7 +3,7 @@ export function Button({ children, className, style, onClick }) {
     <button
       className={`${className}`}
       style={style}
-      onClick={(e) => onClick(children)}
+      onClick={() => onClick(children)}
     >
       {children}
     </button>

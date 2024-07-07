@@ -5,6 +5,7 @@ export function ButtonList({
   onClickAC,
   onClickDEL,
   onClickOperator,
+  onClickEqual,
 }) {
   return (
     <>
@@ -41,7 +42,11 @@ export function ButtonList({
       </Button>
       <Button onClick={onClickDigit}>.</Button>
       <Button onClick={onClickDigit}>0</Button>
-      <Button className="op" style={{ gridColumn: "span 2" }}>
+      <Button
+        onClick={onClickEqual}
+        className="op"
+        style={{ gridColumn: "span 2" }}
+      >
         =
       </Button>
     </>
