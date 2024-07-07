@@ -23,12 +23,14 @@ body {
   grid-column: 1/-1;
   text-align: end;
   padding: 0 1rem;
+  font-size: 1.2rem;
+  font: verdana;
 }
 
 button {
   border-radius: 50px;
   border: 1px solid grey;
-  margin: 0.6rem;
+  margin: 0.8rem;
   background-color: hsl(0, 0%, 30%);
   font-size: 1.5rem;
   color: white;

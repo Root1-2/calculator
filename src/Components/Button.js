@@ -1,6 +1,10 @@
-export function Button({ children, className, style }) {
+export function Button({ children, className, style, onClickDigit }) {
   return (
-    <button className={`${className}`} style={style}>
+    <button
+      className={`${className}`}
+      style={style}
+      onClick={(e) => onClickDigit(children)}
+    >
       {children}
     </button>
   );
