@@ -1,7 +1,7 @@
-export function Display({ curOper }) {
+export function Display({ curOper, prevOper }) {
   return (
     <div className="display">
-      <p>Previous Operand</p>
+      <p>{prevOper}</p>
       <p>{curOper}</p>
     </div>
   );
