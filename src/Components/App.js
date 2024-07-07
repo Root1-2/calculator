@@ -39,9 +39,15 @@ export default function App() {
     }
 
     const expression = prevOper + curOper;
+    if (curOper.includes("/ 0")) {
+      setCurOper("∞");
+      setPrevOper("");
+      return;
+    }
     // console.log(expression);
+    // eslint-disable-next-line no-eval
     const result = eval(expression);
-    setCurOper(result);
+    setCurOper(result.toString());
     setPrevOper("");
   }
 
